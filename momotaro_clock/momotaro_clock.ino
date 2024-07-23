@@ -20,7 +20,7 @@ constexpr uint8_t PIN_DO_CLAP = D7;
 constexpr uint8_t PIN_DI_STOP = D6;
 
 constexpr uint32_t PSG_EMU_CLOCK = 2000000; // 2 MHz
-constexpr uint32_t PSG_RATE = 20000; // 20 kHz
+constexpr uint32_t PSG_RATE = 44100; // 44.1 kHz
 constexpr uint16_t MML_PROC_RATE = 400;  // 400 Hz
 
 constexpr unsigned long EXEC_CYCLE_MML = (1000*1000uL)/MML_PROC_RATE; // unit: usec.
@@ -146,7 +146,7 @@ const char *get_momotaro_mml(uint16_t tempo, int16_t bias) {
 
 const char *get_dissonance_momotaro_mml() {
     int rc = -1;
-    rc = snprintf(mml_buffer, sizeof(mml_buffer), mml_format, 160, 180, 160, 160, 160, 220);
+    rc = snprintf(mml_buffer, sizeof(mml_buffer), mml_format, 190, 300, 190, 310, 190, 290);
     return (rc > 0) ? mml_buffer : nullptr;
 }
 
@@ -183,12 +183,24 @@ void start_alarm() {
         display_momotaro.set_speed(6);
         break;
     case 7:
-        mml = get_momotaro_mml(150, 160);
+        mml = get_momotaro_mml(150, 180);
         display_momotaro.set_speed(7);
+        break;
+    case 8:
+        mml = get_momotaro_mml(160, 210);
+        display_momotaro.set_speed(8);
+        break;
+    case 9:
+        mml = get_momotaro_mml(170, 240);
+        display_momotaro.set_speed(9);
+        break;
+    case 10:
+        mml = get_momotaro_mml(180, 270);
+        display_momotaro.set_speed(10);
         break;
     default:
         mml = get_dissonance_momotaro_mml();
-        display_momotaro.set_speed(7);
+        display_momotaro.set_speed(11);
         display_momotaro.enter_kibidango_mode();
         break;
 
@@ -356,7 +368,7 @@ void loop() {
                              : ( snooze_exec_counter == 4 ) ?  300000
                              : 0;
 
-            if ( snooze_exec_counter <= 7 ) {
+            if ( snooze_exec_counter <= 10 ) {
                 alarm_state = AlarmState::SnoozeWaitingForAlarm;
                 psgino.Stop();
             } else {

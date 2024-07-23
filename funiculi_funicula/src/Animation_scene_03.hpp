@@ -36,7 +36,7 @@ struct Animation_scene_03 : IAnimation {
     bool update(int32_t param, LedMatrixBuffer &buffer) override {
         (void)param;
 
-        if ( ++counter_ >= 3300 ) {
+        if ( ++counter_ >= 2000 ) {
             counter_ = 0;
 
             spr_ncoppa_.x += 1;

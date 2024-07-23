@@ -110,7 +110,7 @@ const char mml[] =
 ;
 
 constexpr uint32_t PSG_EMU_CLOCK = 2000000; // 2 MHz
-constexpr uint32_t PSG_RATE = 20000; // 20 kHz
+constexpr uint32_t PSG_RATE = 44100; // 44.1 kHz
 constexpr uint16_t MML_PROC_RATE = 400;  // 400 Hz
 constexpr unsigned long EXEC_CYCLE_MML = (1000*1000uL)/MML_PROC_RATE; // unit: usec.
 

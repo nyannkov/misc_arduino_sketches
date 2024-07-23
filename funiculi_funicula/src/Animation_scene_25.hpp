@@ -24,7 +24,7 @@ struct Animation_scene_25 : IAnimation {
             current_param_ = param;
         }
 
-        if ( ++counter_ >= 8000 ) {
+        if ( ++counter_ >= 4000 ) {
             counter_ = 0;
 
             if ( current_param_ <= 0 ) {

@@ -25,7 +25,7 @@ struct Animation_scene_10 : IAnimation {
 
     bool update(int32_t param, LedMatrixBuffer &buffer) override {
         (void)param;
-        if ( ++counter_ >= 55000 ) {
+        if ( ++counter_ >= 30000 ) {
             counter_ = 0;
 
             spr_train_.x +=2;

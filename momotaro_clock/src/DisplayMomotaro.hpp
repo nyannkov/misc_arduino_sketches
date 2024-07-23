@@ -109,41 +109,58 @@ struct DisplayMomotaro {
     void set_speed(int32_t speed) {
         switch ( speed ) {
         case 1:
-            period_peach_ = 1900;
-            period_lyrics_ = 700;
-            break;
-
-        case 2:
-            period_peach_ = 1900;
-            period_lyrics_ = 600;
-            break;
-
-        case 3:
-            period_peach_ = 1800;
-            period_lyrics_ = 550;
-            break;
-
-        case 4:
-            period_peach_ = 1700;
-            period_lyrics_ = 500;
-            break;
-
-        case 5:
-            period_peach_ = 1600;
-            period_lyrics_ = 450;
-            break;
-
-        case 6:
-            period_peach_ = 1400;
+            period_peach_ = 1000;
             period_lyrics_ = 400;
             break;
 
+        case 2:
+            period_peach_ = 900;
+            period_lyrics_ = 350;
+            break;
+
+        case 3:
+            period_peach_ = 800;
+            period_lyrics_ = 310;
+            break;
+
+        case 4:
+            period_peach_ = 700;
+            period_lyrics_ = 290;
+            break;
+
+        case 5:
+            period_peach_ = 670;
+            period_lyrics_ = 270;
+            break;
+
+        case 6:
+            period_peach_ = 650;
+            period_lyrics_ = 250;
+            break;
+
         case 7:
-            period_peach_ = 1300;
-            period_lyrics_ = 380;
+            period_peach_ = 630;
+            period_lyrics_ = 220;
+            break;
+
+        case 8:
+            period_peach_ = 610;
+            period_lyrics_ = 190;
+            break;
+
+        case 9:
+            period_peach_ = 590;
+            period_lyrics_ = 180;
+            break;
+
+        case 10:
+            period_peach_ = 570;
+            period_lyrics_ = 170;
             break;
 
         default:
+            period_peach_ = 550;
+            period_lyrics_ = 160;
             break;
         }
     }

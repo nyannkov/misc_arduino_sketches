@@ -36,7 +36,7 @@ struct Animation_scene_22 : IAnimation {
             current_param_ = param;
         }
 
-        if ( ++counter_ >= 8000 ) {
+        if ( ++counter_ >= 4500 ) {
             counter_ = 0;
             spr_funi_.y--;
             spr_culi_.y--;
