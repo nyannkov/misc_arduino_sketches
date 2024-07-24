@@ -321,7 +321,7 @@ void loop() {
         clap_flag = false;
         digitalWrite(PIN_DO_CLAP, HIGH);
         palm_together_flag = true;
-        palm_together_hold_counter = 1000;
+        palm_together_hold_counter = 500;
     }
 
     if ( palm_together_flag ) {
