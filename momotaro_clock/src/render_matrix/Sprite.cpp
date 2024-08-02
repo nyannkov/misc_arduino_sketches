@@ -6,7 +6,6 @@
  */
 #include "Sprite.hpp"
 
-
 void Sprite::initialize() {
     x = 0;
     y = 0;
@@ -25,9 +24,9 @@ const BitmapImage *Sprite::get_bitmap_image() const {
 
 bool Sprite::render_led_matrix_buffer(LedMatrixBuffer &buffer) {
 
-    int16_t r0, l0, t0, b0;
-    int16_t r1, l1, t1, b1;
-    uint8_t w, h;
+    int32_t r0, l0, t0, b0;
+    int32_t r1, l1, t1, b1;
+    uint16_t w, h;
 
     if ( !image_ ) {
         return false;
@@ -52,15 +51,15 @@ bool Sprite::render_led_matrix_buffer(LedMatrixBuffer &buffer) {
     b1 = y + h - 1;
 
     if ( (l0 <= r1) && (l1 <= r0) && (t0 <= b1) && (t1 <= b0) ) {
-        int16_t row_s, col_s, row_e, col_e;
+        int32_t row_s, col_s, row_e, col_e;
 
         col_s = (l1 < l0) ? l0 : l1;
         col_e = (r1 < r0) ? r1 : r0;
         row_s = (t1 < t0) ? t0 : t1;
         row_e = (b1 < b0) ? b1 : b0;
 
-        for ( int16_t col = col_s; col <= col_e; col++ ) {
-            for ( int16_t row = row_s; row <= row_e; row++ ) {
+        for ( int32_t col = col_s; col <= col_e; col++ ) {
+            for ( int32_t row = row_s; row <= row_e; row++ ) {
                 if ( image_->dot_type == BitmapImage::DotType::Byte ) {
                     uint8_t pixel = image_->data[w*(row-t1) + col-l1];
                     if ( pixel != 0 ) {
