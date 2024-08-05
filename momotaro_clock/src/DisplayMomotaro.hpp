@@ -6,9 +6,6 @@
 #include "render_matrix/Encoding.hpp"
 #include "Resources.hpp"
 
-constexpr size_t MAX_LYRICS_LENGTH = 80;
-constexpr size_t FONT_HEIGHT = 8;
-
 struct DisplayMomotaro {
 
     DisplayMomotaro() {}
@@ -21,37 +18,37 @@ struct DisplayMomotaro {
         spr_peach_.y = 1;
 
         std::memset(bmp_lyrics_1_, 0, sizeof(bmp_lyrics_1_));
-        load_image_of_font8x8(bmp_lyrics_1_, MAX_LYRICS_LENGTH, FONT_HEIGHT, BitmapImage::DotType::Bit, "ﾓｰﾓﾀﾛｳｻﾝ ﾓﾓﾀﾛｻﾝ");
+        load_image_of_font8x8(bmp_lyrics_1_, MAX_LYRICS_LENGTH_, FONT_HEIGHT_, BitmapImage::DotType::Bit, "ﾓｰﾓﾀﾛｳｻﾝ ﾓﾓﾀﾛｻﾝ");
         image_lyrics_1_.data = bmp_lyrics_1_;
-        image_lyrics_1_.width = MAX_LYRICS_LENGTH;
-        image_lyrics_1_.height = FONT_HEIGHT;
+        image_lyrics_1_.width = MAX_LYRICS_LENGTH_;
+        image_lyrics_1_.height = FONT_HEIGHT_;
         image_lyrics_1_.dot_type = BitmapImage::DotType::Bit;
         spr_lyrics_1_.set_bitmap_image(&image_lyrics_1_);
         spr_lyrics_1_.x = -100;
         spr_lyrics_1_.y = 0;
 
         std::memset(bmp_lyrics_2_, 0, sizeof(bmp_lyrics_2_));
-        load_image_of_font8x8(bmp_lyrics_2_, MAX_LYRICS_LENGTH, FONT_HEIGHT, BitmapImage::DotType::Bit, "ｵｺｼﾆﾂｹﾀ ｷﾋﾞﾀﾞﾝｺﾞ");
+        load_image_of_font8x8(bmp_lyrics_2_, MAX_LYRICS_LENGTH_, FONT_HEIGHT_, BitmapImage::DotType::Bit, "ｵｺｼﾆﾂｹﾀ ｷﾋﾞﾀﾞﾝｺﾞ");
         image_lyrics_2_.data = bmp_lyrics_2_;
-        image_lyrics_2_.width = MAX_LYRICS_LENGTH;
-        image_lyrics_2_.height = FONT_HEIGHT;
+        image_lyrics_2_.width = MAX_LYRICS_LENGTH_;
+        image_lyrics_2_.height = FONT_HEIGHT_;
         image_lyrics_2_.dot_type = BitmapImage::DotType::Bit;
         spr_lyrics_2_.set_bitmap_image(&image_lyrics_2_);
         spr_lyrics_2_.x = -100;
         spr_lyrics_2_.y = 0;
 
         std::memset(bmp_lyrics_3_, 0, sizeof(bmp_lyrics_3_));
-        load_image_of_font8x8(bmp_lyrics_3_, MAX_LYRICS_LENGTH, FONT_HEIGHT, BitmapImage::DotType::Bit, "ﾋﾄﾂ ﾜﾀｼﾆ ｸﾀﾞｻｲﾅ");
+        load_image_of_font8x8(bmp_lyrics_3_, MAX_LYRICS_LENGTH_, FONT_HEIGHT_, BitmapImage::DotType::Bit, "ﾋﾄﾂ ﾜﾀｼﾆ ｸﾀﾞｻｲﾅ");
         image_lyrics_3_.data = bmp_lyrics_3_;
-        image_lyrics_3_.width = MAX_LYRICS_LENGTH;
-        image_lyrics_3_.height = FONT_HEIGHT;
+        image_lyrics_3_.width = MAX_LYRICS_LENGTH_;
+        image_lyrics_3_.height = FONT_HEIGHT_;
         image_lyrics_3_.dot_type = BitmapImage::DotType::Bit;
         spr_lyrics_3_.set_bitmap_image(&image_lyrics_3_);
         spr_lyrics_3_.x = -100;
         spr_lyrics_3_.y = 0;
 
         std::memset(bmp_lyrics_4_, 0, sizeof(bmp_lyrics_4_));
-        load_image_of_font8x8(bmp_lyrics_4_, MAX_LYRICS_LENGTH, FONT_HEIGHT, BitmapImage::DotType::Bit, "ｷﾋﾞﾀﾞﾝｺﾞ ｷﾋﾞﾀﾞﾝｺﾞ");
+        load_image_of_font8x8(bmp_lyrics_4_, MAX_LYRICS_LENGTH_, FONT_HEIGHT_, BitmapImage::DotType::Bit, "ｷﾋﾞﾀﾞﾝｺﾞ ｷﾋﾞﾀﾞﾝｺﾞ");
 
         scene_id_ = 0;
         counter_ = 0;
@@ -168,26 +165,26 @@ struct DisplayMomotaro {
     void enter_kibidango_mode() {
 
         image_lyrics_1_.data = bmp_lyrics_1_;
-        image_lyrics_1_.width = MAX_LYRICS_LENGTH;
-        image_lyrics_1_.height = FONT_HEIGHT;
+        image_lyrics_1_.width = MAX_LYRICS_LENGTH_;
+        image_lyrics_1_.height = FONT_HEIGHT_;
         image_lyrics_1_.dot_type = BitmapImage::DotType::Bit;
         spr_lyrics_1_.set_bitmap_image(&image_lyrics_1_);
         spr_lyrics_1_.x = -100;
         spr_lyrics_1_.y = 0;
 
         image_lyrics_2_.data = bmp_lyrics_2_;
-        image_lyrics_2_.width = MAX_LYRICS_LENGTH;
-        image_lyrics_2_.height = FONT_HEIGHT;
+        image_lyrics_2_.width = MAX_LYRICS_LENGTH_;
+        image_lyrics_2_.height = FONT_HEIGHT_;
         image_lyrics_2_.dot_type = BitmapImage::DotType::Bit;
         spr_lyrics_2_.set_bitmap_image(&image_lyrics_2_);
         spr_lyrics_2_.x = -100;
         spr_lyrics_2_.y = 0;
 
         std::memset(bmp_lyrics_3_, 0, sizeof(bmp_lyrics_3_));
-        load_image_of_font8x8(bmp_lyrics_3_, MAX_LYRICS_LENGTH, FONT_HEIGHT, BitmapImage::DotType::Bit, "ﾋﾄﾂ ﾜﾀｼﾆ ｷﾋﾞﾀﾞﾝｺﾞ");
+        load_image_of_font8x8(bmp_lyrics_3_, MAX_LYRICS_LENGTH_, FONT_HEIGHT_, BitmapImage::DotType::Bit, "ﾋﾄﾂ ﾜﾀｼﾆ ｷﾋﾞﾀﾞﾝｺﾞ");
         image_lyrics_3_.data = bmp_lyrics_3_;
-        image_lyrics_3_.width = MAX_LYRICS_LENGTH;
-        image_lyrics_3_.height = FONT_HEIGHT;
+        image_lyrics_3_.width = MAX_LYRICS_LENGTH_;
+        image_lyrics_3_.height = FONT_HEIGHT_;
         image_lyrics_3_.dot_type = BitmapImage::DotType::Bit;
         spr_lyrics_3_.set_bitmap_image(&image_lyrics_3_);
         spr_lyrics_3_.x = -100;
@@ -231,6 +228,8 @@ struct DisplayMomotaro {
     }
 
 private:
+    static constexpr size_t MAX_LYRICS_LENGTH_ = 80;
+    static constexpr size_t FONT_HEIGHT_ = 8;
     Sprite spr_peach_;
     Sprite spr_lyrics_1_;
     Sprite spr_lyrics_2_;
@@ -239,10 +238,10 @@ private:
     uint32_t counter_;
     uint32_t period_peach_;
     uint32_t period_lyrics_;
-    uint8_t bmp_lyrics_1_[FONT_HEIGHT*MAX_LYRICS_LENGTH/8];
-    uint8_t bmp_lyrics_2_[FONT_HEIGHT*MAX_LYRICS_LENGTH/8];
-    uint8_t bmp_lyrics_3_[FONT_HEIGHT*MAX_LYRICS_LENGTH/8];
-    uint8_t bmp_lyrics_4_[FONT_HEIGHT*MAX_LYRICS_LENGTH/8];
+    uint8_t bmp_lyrics_1_[FONT_HEIGHT_*MAX_LYRICS_LENGTH_/8];
+    uint8_t bmp_lyrics_2_[FONT_HEIGHT_*MAX_LYRICS_LENGTH_/8];
+    uint8_t bmp_lyrics_3_[FONT_HEIGHT_*MAX_LYRICS_LENGTH_/8];
+    uint8_t bmp_lyrics_4_[FONT_HEIGHT_*MAX_LYRICS_LENGTH_/8];
     BitmapImage image_lyrics_1_;
     BitmapImage image_lyrics_2_;
     BitmapImage image_lyrics_3_;
