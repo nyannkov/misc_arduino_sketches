@@ -16,6 +16,11 @@ please make necessary adjustments and customizations.
 
 https://www.youtube.com/watch?v=GYPRK5R7D5M
 
+## pitch_tempo_boost
+
+An American traditional camp song, 'The Other Day I Met a Bear', is played. 
+There are two buttons implemented: one to slightly increase the tempo and pitch, and another to restore the original tempo and pitch and stop the music.
+
 # License
 
 MIT License.
