@@ -21,6 +21,8 @@ https://www.youtube.com/watch?v=GYPRK5R7D5M
 An American traditional camp song, 'The Other Day I Met a Bear', is played. 
 There are two buttons implemented: one to slightly increase the tempo and pitch, and another to restore the original tempo and pitch and stop the music.
 
+https://www.youtube.com/shorts/wa4zpM_kRc8
+
 # License
 
 MIT License.
